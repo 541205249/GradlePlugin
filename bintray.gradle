@@ -1,9 +1,10 @@
+/*
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven-publish'
+
 group = "com.jiazy.demo"
 version = "0.0.1"
 project.archivesBaseName = "tojcenterdemo"
-
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 26
@@ -58,7 +59,8 @@ def pomConfig = {
         }
     }
 
-    /*
+    */
+/*
     //需要注意的是如果你的项目依赖了第三方库，则你也需要加入，比如这里我引用了fastjson
     //这里有引号，并且有个空格，否则生成不了依赖，
     // 主要是这里的dependencies并不是build.gradle里的dependencies，
@@ -70,7 +72,8 @@ def pomConfig = {
             "version " "1.2.6"
         }
     }
-    */
+    *//*
+
 
 }
 
@@ -95,8 +98,8 @@ bintray {
     Properties properties = new Properties()
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-    user = properties.getProperty('BINTRAY_USER')
-    key = properties.getProperty('BINTRAY_KEY')
+    user = properties.getProperty('bintray.user')
+    key = properties.getProperty('bintray.apikey')
 
     configurations = ['archives']
     publications = ['mavenJava']
@@ -112,4 +115,4 @@ bintray {
         licenses = ['Apache-2.0']
         publicDownloadNumbers = true
     }
-}
+}*/

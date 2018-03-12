@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-apply from: '../bintray.gradle'
+//apply from: '../bintray.gradle'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 26
@@ -25,3 +26,17 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+publish {
+    userOrg = 'jiazy'//bintray.com用户名
+    groupId = 'com.jiazy.demo'//jcenter上的路径
+    artifactId = 'tojcenterdemo'//项目名称
+    publishVersion = '0.0.1'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'
+    website = 'https://github.com/541205249/GradlePlugin'
+}
+
+
+/**
+ gradlew clean build bintrayUpload -PbintrayUser=jiazy  -PbintrayKey=43c7463ffd3929df73c6b011b7a81ca92217235e  -PdryRun=false
+ */
