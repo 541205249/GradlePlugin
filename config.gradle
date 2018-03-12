@@ -1,0 +1,51 @@
+ext.bfcBuildConfig = [
+        // SDK的compileSdkVersion
+        compileSdkVersion: 23,
+        // SDK的buildToolsVersion
+        buildToolsVersion: "24.0.0",
+        // SDK的minSdkVersion
+        minSdkVersion    : 15,
+        // SDK的targetSdkVersion
+        targetSdkVersion : 23,
+
+        //本地库URL
+        MAVEN_URL                  : 'http://172.28.1.147:8081/nexus/content/repositories/thirdparty/',
+        //灰度仓库URL
+        MAVEN_RC_URL               : 'http://172.28.1.147:8081/nexus/content/repositories/thirdparty-rc/',
+        //测试仓库URL
+        MAVEN_SNAPSHOT_URL         : 'http://172.28.1.147:8081/nexus/content/repositories/thirdparty-snapshot/',
+
+        //登录nexus oss的用户名
+        NEXUS_USERNAME             : 'admin',
+        //登录nexus oss的密码
+        NEXUS_PASSWORD             : 'admin123',
+
+        // uploadArchives 上传bfc库配置
+        // base
+        POM_GROUP_ID               : 'com.eebbk.bfc',
+        POM_DESCRIPTION            : 'Bfc Lib For Android',
+        POM_URL                    : 'http://172.28.2.93/groups/bfc',
+        POM_INCEPTION_YEAR         : '2016',
+
+        // scm
+        POM_SCM_URL                : 'http://172.28.2.93/groups/bfc',
+        POM_SCM_CONNECTION         : 'scm:git@kf2GitHUB:bfc/Bfc.git',
+        POM_SCM_DEV_CONNECTION     : 'scm:git@kf2GitHUB:bfc/Bfc.git',
+
+        //licenses
+        POM_LICENCE_COMMENTS       : 'A business-friendly OSS license',
+        POM_LICENCE_NAME           : 'The Apache Software License, Version 2.0',
+        POM_LICENCE_URL            : 'http://www.apache.org/licenses/LICENSE-2.0.txt',
+        POM_LICENCE_DIST           : 'repo',
+
+        //developers
+        POM_DEVELOPER_ID           : 'bfc',
+        POM_DEVELOPER_NAME         : 'bfc',
+        POM_DEVELOPER_EMAIL        : '',
+        POM_DEVELOPER_URL          : 'http://172.28.2.93/groups/bfc',
+
+        //issueManagement
+        POM_ISSUE_MANAGEMENT_SYSTEM: 'GitLab',
+        POM_ISSUE_MANAGEMENT_URL   : 'http://172.28.2.93/groups/bfc/issues',
+
+]

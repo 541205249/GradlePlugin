@@ -1,9 +1,14 @@
+group = "com.jiazy.demo"
+version = "0.0.1"
+project.archivesBaseName = "tojcenterdemo"
+
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
 
-group = "com.jiazy.plugin"
-version = "1.0.0"
-project.archivesBaseName = "tojcenterdemo"
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+}
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -28,7 +33,7 @@ javadoc {
         author true
         version true
         links "http://docs.oracle.com/javase/7/docs/api"
-        title "jiazyplugin"
+        title "tojcenterdemo"
     }
 }
 
@@ -93,15 +98,13 @@ bintray {
     user = properties.getProperty('BINTRAY_USER')
     key = properties.getProperty('BINTRAY_KEY')
 
-
-
     configurations = ['archives']
     publications = ['mavenJava']
     publish = true
 
     pkg {
         repo = 'maven'
-        name = "CustomPlugin"
+        name = "tojcenterdemo"
         desc = "gradle插件demo"
         websiteUrl = "https://github.com/541205249/GradlePlugin"
         issueTrackerUrl = "https://github.com/541205249/GradlePlugin/issues"
